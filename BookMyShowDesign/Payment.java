@@ -19,6 +19,15 @@ class Payment {
     public String getTransactionId() {
         return transactionId;
     }
+    public String paymentId() {
+        return paymentId;
+    }
+    public PaymentMethod getMethod() {
+        return method;
+    }
+    public String getProvider() {
+        return provider;
+    }
 
     public double getAmount() {
         return amount;

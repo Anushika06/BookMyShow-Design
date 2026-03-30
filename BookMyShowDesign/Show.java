@@ -5,12 +5,14 @@ public class Show {
     private String id;
     private Movie movie;
     private LocalDateTime startTime;
+    private Screen screen;
     private Map<String, SeatStatus> seatStatus = new HashMap<>();
 
-    public Show(String id, Movie movie, List<Seat> seats, LocalDateTime startTime) {
+    public Show(String id, Movie movie, List<Seat> seats, LocalDateTime startTime, Screen screen) {
         this.id = id;
         this.movie = movie;
         this.startTime = startTime;
+        this.screen = screen;
 
         for (Seat seat : seats) {
             seatStatus.put(seat.getId(), SeatStatus.AVAILABLE);
@@ -33,5 +35,8 @@ public class Show {
     }
     public LocalDateTime getStartTime() {
         return startTime;
+    }
+    public Screen getScreen() {
+        return screen;
     }
 }

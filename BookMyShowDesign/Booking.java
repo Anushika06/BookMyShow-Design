@@ -34,7 +34,12 @@ class Booking {
     public List<Seat> getSeats() {
         return seats;
     }
-
+    public String getId() {
+        return id;
+    }
+    public User getUser() {
+        return user;
+    }
     public double getAmount() {
         return amount;
     }
